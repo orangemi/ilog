@@ -63,6 +63,7 @@ ilog._time = function (time) {
 }
 
 ilog._stringify = function (obj) {
+  if (typeof(obj) === 'string') return util.format(obj)
   try {
     return JSON.stringify(obj)
   } catch (e) {
